@@ -14,7 +14,7 @@ export const useCounterStore = defineStore('counter', {
     },
     updateList(listInput: any, index: number, modifyBy: any) {
       this.todoList[index].title = listInput;
-      this.todoList[index].status.modifyBy = modifyBy;
+      this.todoList[index].modifyBy = modifyBy;
     },
   },
   getters: {

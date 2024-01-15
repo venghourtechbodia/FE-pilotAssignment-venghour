@@ -16,8 +16,8 @@
   <div v-for="(item, index) in todoListRender" :key="index" style="color: whitesmoke; width: 100%; margin: 20px;">
     <h1>{{ item.title }}</h1>
     <p>{{ item.description }}</p>
-    <p>{{ item.status.createOn }}</p>
-    <p>{{ item.status.modifyBy }}</p>
+    <p>{{ item.createOn }}</p>
+    <p>{{ item.modifyBy }}</p>
     <input v-model="title" />
     <button>Store Data</button>
     <button style="margin-left: 10px;" @click="updateToDoList(title, index)">update Data</button>
@@ -42,46 +42,41 @@ const toDoList = [
     Id: 0,
     title: "Work1",
     description: "washing dishes is a hard work",
-    status: {
-      createOn: new Date,
-      modifyBy: new Date
-    },
+    status: "pending",
+    createOn: new Date,
+    modifyBy: new Date,
   },
   {
     Id: 1,
     title: "Work2",
     description: "washing dishes is a hard work",
-    status: {
-      createOn: new Date,
-      modifyBy: new Date
-    },
+    status: "done",
+    createOn: new Date,
+    modifyBy: new Date,
   },
   {
     Id: 2,
     title: "Work3",
     description: "washing dishes is a hard work",
-    status: {
-      createOn: new Date,
-      modifyBy: new Date
-    },
+    status: "doing",
+    createOn: new Date,
+    modifyBy: new Date,
   },
   {
     Id: 3,
     title: "Work4",
     description: "washing dishes is a hard work",
-    status: {
-      createOn: new Date,
-      modifyBy: new Date
-    },
+    status: "done",
+    createOn: new Date,
+    modifyBy: new Date,
   },
   {
     Id: 4,
     title: "Work5",
     description: "washing dishes is a hard work",
-    status: {
-      createOn: new Date,
-      modifyBy: new Date
-    },
+    status: "pending",
+    createOn: new Date,
+    modifyBy: new Date,
   },
 ]
 counter.storeToDoList(toDoList);
