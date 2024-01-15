@@ -81,7 +81,6 @@ const toDoList = [
 ]
 counter.storeToDoList(toDoList);
 const todoListRender = computed(() => counter.getToDoList) ;
-console.log('todoList arr', counter.todoList[0]);
 </script>
 <style scoped>
 header {
